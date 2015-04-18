@@ -1,0 +1,180 @@
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+GLOBAL: HTML ELEMENTS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6, dl, ul, ol, table, p {
+	margin: 20px 0;
+}
+
+h1 {
+	font-size: 55px;
+}
+h2 {
+	font-size: 30px;
+}
+h3, h4, h5 {
+	font-size: 22px;
+}
+
+th, td {
+	padding: 8px 10px;
+}
+
+ul {
+	margin-left: 30px;
+}
+
+form ul {
+	margin-left: 0;
+}
+
+img.f-left {
+	margin-right: 20px;
+}
+img.f-right {
+	margin-left: 20px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+GLOBAL: LAYOUT
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.wrapper {
+	width: 980px;
+}
+
+.header {
+	padding: 30px 0;
+}
+	.nav {
+		position: absolute; 
+		top: 8px; 
+		left: 80px;
+	}
+	.nav a {
+		margin-right: 20px;
+	}
+	.nav select {
+		display: none;
+	}
+
+.content {
+	padding: 40px 0;
+}
+
+.half {
+	float: left;
+	width: 470px;
+}
+
+.testimonials {
+	padding: 40px 0;
+}
+	.testimonials article {
+		margin-top: 40px;
+	}
+	.testimonials-image {
+		float: left;
+		width: 100px;
+	}
+	.testimonials-text {
+		float: right;
+		width: 340px;
+	}
+
+.footer {
+	padding: 40px 0;
+}
+	.footer .f-right img {
+		margin-left: 8px;
+	}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: HOMEPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main {
+	height: 380px;
+}
+	.main .wrapper {
+		width: 560px;
+		padding-top: 60px;
+		padding-right: 420px;
+	}
+	.main h1 {
+		font-weight: 400;
+	}
+	.main h3 {
+		margin-top: 15px;
+		line-height: 1;
+	}
+	.button {
+		margin: 0;
+		margin-top: 20px;
+		padding: 15px 30px;
+	}
+	.iphone-smaller {
+		position: absolute; 
+		top: 33px;
+		right: 179px;
+	}
+	.iphone-bigger {
+		position: absolute; 
+		top: -25px; 
+		right: 0;
+	}	
+
+.introduction {
+	min-height: 267px;
+	padding: 40px 0;
+}
+	.introduction-text {
+		float: right;
+		padding-top: 55px;
+		font-size: 22px;
+	}
+
+.features {
+	padding: 40px 0;
+}
+	.features article {
+		float: left;
+		width: 310px;
+		margin-top: 30px;
+		margin-right: 25px;
+	}
+	.features article.last {
+		margin-right: 0;
+	}
+	.features article img {
+		margin-bottom: 20px;
+	}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: SUBPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main-subpage {
+	padding: 40px 0;
+}
+
+.gallery {
+	margin-left: 0;
+}
+	.gallery li {
+		display: block;
+		float: left;
+		margin-right: 15px;
+	}
+	.gallery .last {
+		margin-right: 0;
+	}
+
+.input-text,
+.input-textarea {
+	padding: 8px;
+}
+	.input-submit {
+		padding: 8px 20px;
+		cursor: pointer;
+	}

@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Register</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="reset.css" media="all">
+<link rel="stylesheet" href="global.css" media="all">
+<link rel="stylesheet" href="mobile.css" media="all and (max-width:767px)">
+<link rel="stylesheet" href="desktop.css" media="all and (min-width:768px)">
+<!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="desktop.css" media="all"><![endif]-->
+<!--[if lt IE 9]><script src="html5.js"></script><![endif]-->
+<script src="jquery.min.js"></script>
+<script src="init.js"></script>
+
+  <header class="header">
+    <div class="wrapper cf">
+       
+    <nav class="nav cf" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="subpage.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="userHome.php">My Account</a></li>
+      </ul>
+    </nav>
+  </div>
+        
+
+    <FORM Action="logout.php" Method="post">
+        <input type="submit" value="Log Out" class="button33" style="margin-left: 30cm"></input>
+        
+    </FORM>
+    
+
+</header>
+
+
+</head>
+<body>
+<div class="introduction">
+    <div class="wrapper cf">
+<FORM ACTION="Register.php" METHOD="post">
+   
+    <table border="3">
+     <tr>
+
+
+                    <th colspan="2" style="color:red">An account under this email address already exists</th>
+
+                </tr>
+       <tr>
+            <th colspan="2"><b>Register</b></th>
+        </tr>
+        <tr>
+            <td>Name :</td><td><input name="regname" placeholder="Full Name" type="text" size"20"></input></td>
+        </tr>
+        <tr>
+            <td>Password :</td><td><input name="regpass1" placeholder="Must be at least 5 characters long"  type="password" size"20"></input></td>
+        </tr>
+		 <tr>
+            <td>Confirm Password :</td><td><input name="regpass2" placeholder="Confirm Password" type="password" size"20"></input></td>
+        </tr>
+        <tr>
+        <td>Email :</td><td><input name="regemail" type="text" placeholder="Email Address" size"20"></input></td>
+        </tr>
+        <tr>
+            <td>Date of Birth :</td><td><input name="regDOB" type="date"  placeholder="Date of Birth" size"20"></input></td>
+        </tr>
+    </table>
+    <input type="submit" class="button" value="Register"></input>
+</FORM>
+</div>
+</div>
+<div class="features">
+    <div class="wrapper cf">
+        <h2>Key Features</h2>
+        <article> 
+            <p>Let your friends know about all the things that you would need</p>
+        </article>
+        <article> 
+            <p>Invite your friends to different events that you are planning</p>
+        </article>
+        <article class="last"> 
+            <p>Connect and share the wish lists that you created with your friends using social media</p>
+        </article>
+    </div>
+</div>
+<div class="testimonials">
+    <div class="wrapper cf">
+        <h2>What our customers say</h2>
+        <article class="half cf">
+            <div class="testimonials-image"> <img src="images/testimonial-01.png" alt=""></div>
+            <div class="testimonials-text">
+                <p>This website is awesome and it works <span>&ndash; Super Saiyyan</span></p>
+            </div>
+        </article>
+        <article class="half f-right cf">
+            <div class="testimonials-image"> <img src="images/testimonial-02.png" alt=""> </div>
+            <div class="testimonials-text">
+                <p>Yayyyy. Awesome service. I was able to get all the gifts I wanted <span>&ndash; Random User 9000</span></p>
+            </div>
+        </article>
+    </div>
+</div>
+<footer class="footer">
+    <div class="wrapper cf">
+        <p class="f-right"> <a href="#"><img src="design/facebook.png" alt=""></a> <a href="#"><img src="design/twitter.png" alt=""></a> <a href="#"><img src="design/dribbble.png" alt=""></a> </p>
+    </div>
+</footer>
+</body>
+</html>

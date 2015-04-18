@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+<title>Event and Wishlist</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="inc/reset.css" media="all">
+<link rel="stylesheet" href="inc/global.css" media="all">
+<link rel="stylesheet" href="inc/mobile.css" media="all and (max-width:767px)">
+<link rel="stylesheet" href="inc/desktop.css" media="all and (min-width:768px)">
+<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css">
+<!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="inc/desktop.css" media="all"><![endif]-->
+<!--[if lt IE 9]><script src="inc/html5.js"></script><![endif]-->
+<script src="inc/jquery.min.js"></script>
+<script src="inc/init.js"></script>
+<script src="jquery.js"></script>
+<script src="jquery.datetimepicker.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+
+</head>
+<body>
+<header class="header">
+  <div class="wrapper cf">
+    <nav class="nav cf" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="subpage.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="userHome.php">My Account</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="main-subpage">
+  <div class="wrapper">
+    <h1>New Event</h1>
+  </div>
+</div>
+
+<div class="content">
+  <div class="wrapper cf">
+    
+      
+      <!--suppress HtmlUnknownTarget -->
+      <FORM METHOD="POST" ACTION="Event.php">
+          <ul>
+          
+              <li>
+                  <div class="ui-widget">
+                  <label for="event">Event:</label>
+                   <label for="event">You have already created this event!</label>
+                  <label><input id="event" name="Event" type="text" size="35" class="input-text" >
+                  </label>
+                  </div>
+              </li>
+              <li>
+                  <label>Start Date:</label>
+                  <label>
+                      <input name="Date1" id="datetimepicker1" type="text" size="35" class="input-text">
+                  </label>
+              </li>
+              <li>
+                  <label>End Date:</label>
+                  <label>
+                      <input name="Date2" id="datetimepicker2" type="text" size="35" class="input-text">
+                  </label>
+              </li>
+              <li>
+                  <label>Description:</label>
+                  <label><textarea name="Description" cols="85" rows="7" class="input-textarea"></textarea></label>
+              </li>
+       
+              <li>
+                  <input type="submit" value="Submit" class="input-submit">
+              </li>
+
+          </ul>
+      </form>
+  </div>
+</div>
+
+</body>
+<script>
+    $(function() {
+        var availableTags = [
+            "Birthday party",
+            "Game night",
+            "Wedding"
+        ];
+        $( "#event" ).autocomplete({
+            source: availableTags
+        });
+    });
+    var today = new Date();
+    today.setDate(today.getDate());
+    jQuery(function(){
+        jQuery('#datetimepicker1').datetimepicker({
+            format:'Y/m/d',
+            onShow:function( ct ){
+                this.setOptions({
+                    minDate:today,
+                    maxDate:jQuery('#datetimepicker2').val()?jQuery('#datetimepicker2').val():false
+                })
+            },
+            timepicker:false
+        });
+        jQuery('#datetimepicker2').datetimepicker({
+            format:'Y/m/d',
+            onShow:function( ct ){
+                this.setOptions({
+                    minDate:jQuery('#datetimepicker1').val()?jQuery('#datetimepicker1').val():false
+                })
+            },
+            timepicker:false
+        });
+    });
+</script>
+</html>

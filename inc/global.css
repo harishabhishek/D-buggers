@@ -1,0 +1,251 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:700,400&subset=latin,latin-ext");
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+GLOBAL: HTML ELEMENTS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+body {
+	background-color: #FFF;
+	font: 16px/1.6 "Open Sans", "Arial", sans-serif;
+	color: #222;
+}
+
+h1 {
+	color: #6939E5;
+	font-weight: 700;
+	line-height: 1;
+}
+h2 {
+	line-height: 1.2;
+}
+h3, h4, h5 {
+	line-height: 1.4;
+}
+
+ul {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+	ul ul {
+		margin: 0;
+		margin-left: 15px;
+	}
+
+form ul {
+	list-style: none;
+}
+	form li {
+		padding: 3px 0;
+	}
+	form label {
+		display: block;
+	}
+
+table, th, td {
+	border: 1px solid #03C462;
+	background-color: #FFF;
+	color: #222;
+}
+	th {
+		background-color: #6939E5;
+		color: #FFF;
+		text-align: left;
+	}
+
+a {
+	color: #222;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+GLOBAL: LAYOUT
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.wrapper {
+	margin: 0 auto;
+}
+
+.header {
+	position: relative;
+	background: url("../design/pattern-01.png") 0 100% repeat-x;
+}
+	.header .wrapper {
+		position: relative;
+	}
+	.logo {
+		margin: 0;
+	}
+	.logo img {
+		display: block;
+	}
+	.nav {
+		display: block;
+		text-transform: uppercase;
+	}
+	.nav ul {
+		margin: 0;
+	}
+	.nav li {
+		display: inline;
+	}
+	.nav a {
+		display: block;
+		float: left;
+		color: #999;
+		text-decoration: none;
+	}
+	.nav .current a,
+	.nav a:hover {
+		color: #6939E5;
+	}
+
+.content {
+	background-color: #03C462;
+	color: #FFF;
+}
+
+.testimonials {
+	background-color: #222;
+	color: #FFF;
+}
+	.testimonials h2 {
+		margin: 0;
+		color: #FFF;
+	}
+	.testimonials p {
+		margin: 0;
+	}
+	.testimonials span {
+		display: block;
+		color: #999;
+	}
+
+.footer {
+	background-color: #FFF;
+	color: #999;
+}
+	.footer a {
+		color: #999;
+	}
+	.footer a:hover {
+		color: #555;
+	}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: HOMEPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main {
+	display: block;
+}
+	.main .wrapper {
+		position: relative;
+	}
+	.main h1,
+	.main h3 {
+		margin: 0;
+	}
+	.main h1 {
+		color: #03C462;
+	}
+	.main h3 {
+		color: #AAA;
+	}
+	.button {
+		display: inline-block;
+		background-color: #6939E5;
+		-moz-border-radius: 5px; 
+		-webkit-border-radius: 5px; 
+		border-radius: 5px;
+		color: #FFF;
+		font-size: 15px;
+		font-weight: 700;		
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+	a:hover.button {
+		background-color: #222;
+	}
+	.iphone-smaller {
+		width: 194px;
+		height: 380px;
+		background: url("../design/iphone-smaller.png") 0 0 no-repeat;
+	}
+	.iphone-smaller img {
+		display: block;
+		position: relative;
+		top: 63px;
+		left: 13px;
+	}
+	.iphone-bigger {
+		width: 230px;
+		height: 450px;
+		background: url("../design/iphone-bigger.png") 0 0 no-repeat;
+	}
+	.iphone-bigger img {
+		display: block;
+		position: relative;
+		top: 75px;
+		left: 16px;
+	}
+
+.introduction {
+	background: #03C462 url("../design/pattern-02.png") 0 100% repeat-x;
+	color: #FFF;
+}
+	.introduction-image img {
+		display: block;
+		margin: 0 auto;
+	}
+
+.features {
+	background-color: #03C462;
+}
+	.features h2 {
+		margin: 0;
+		color: #FFF;
+	}	
+	.features article {
+		color: #052;
+	}
+	.features article p {
+		margin: 0;
+	}
+	.features article img {
+		display: block;
+	}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: SUBPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main-subpage h1,
+.main-subpage h3 {
+	margin: 0;
+}
+	.main-subpage h1 {
+		margin-bottom: 10px;
+	}
+
+.gallery {
+	display: block;
+	list-style: none;
+}
+	.gallery img {
+		display: block;
+	}
+
+.input-text,
+.input-textarea {
+	border: 1px solid #FFF;
+	-moz-border-radius: 3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px;
+}
+	.input-submit {
+		border: 1px solid #6939E5;
+		-moz-border-radius: 3px; 
+		-webkit-border-radius: 3px; 
+		border-radius: 3px;
+		background-color: #6939E5;
+		color: #FFF;
+	}

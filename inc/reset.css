@@ -1,0 +1,156 @@
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+HTML5 GLOBAL
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+HTML GLOBAL
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+body {
+	margin: 0;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-font-smoothing: subpixel-antialiased;
+	-ms-font-smoothing: subpixel-antialiased;
+	-o-font-smoothing: subpixel-antialiased;
+	font-smoothing: subpixel-antialiased;
+}
+address, blockquote, body, button, caption, cite, code, dd, dfn, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, label, legend, li, object, ol, p, pre, span, table, td, th, ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-size: 100%;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	vertical-align: baseline;
+	outline: 0;
+}
+button, input, optgroup, option, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol, ul {
+	list-style: none;
+}
+fieldset, img {
+	border: 0;
+}
+input, textarea {
+	-webkit-appearance: none;
+}
+q:before, q:after {
+	content: "";
+	content: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+CSS GLOBAL
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.cf {
+	zoom: 1;
+}
+.cf:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	content: ".";
+}
+.cf-inline {
+	clear: both;
+	float: none;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 0;
+	line-height: 0;
+}
+.hidden {
+	overflow: hidden;
+	position: absolute;
+	top: auto;
+	left: -1000em;
+	width: 1px;
+	height: 1px;
+}
+.f-left {
+	float: left !important;
+}
+.f-right {
+	float: right !important;
+}
+.t-left {
+	text-align: left !important;
+}
+.t-center {
+	text-align: center !important;
+}
+.t-right {
+	text-align: right !important;
+}
+.t-justify {
+	text-align: justify !important;
+}
+.va-top {
+	vertical-align: top !important;
+}
+.va-middle {
+	vertical-align: middle !important;
+}
+.va-bottom {
+	vertical-align: bottom !important;
+}
+.nom {
+	margin: 0 !important;
+}
+.nomt {
+	margin-top: 0 !important;
+}
+.nomb {
+	margin-bottom: 0 !important;
+}
+.block {
+	display: block;
+}
+.inline {
+	display: inline;
+}
+.inline-block {
+	display: inline-block;
+}
+.noscreen {
+	display: none;
+}

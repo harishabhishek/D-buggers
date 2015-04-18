@@ -1,0 +1,190 @@
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+GLOBAL: HTML ELEMENTS
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, dl, ul, ol, table, p {
+	margin: 15px 0;
+}
+
+body {
+	font-size: 14px;
+}
+
+h1 {
+	font-size: 28px;
+	font-weight: 700;
+}
+h2 {
+	font-size: 22px;
+}
+h3, h4, h5 {
+	font-size: 18px;
+}
+
+th, td {
+	padding: 3px 5px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+img.f-left,
+img.f-right {
+	display: block;
+	float: none !important;
+	margin: 0 auto 15px auto;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+GLOBAL: LAYOUT
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.wrapper {
+	width: 100%;
+}
+
+.header {
+	padding: 10px 20px;
+}
+	.nav {
+		position: absolute; 
+		top: 10px; 
+		right: 0;
+	}
+	.nav ul {
+		display: none;
+	}
+	.nav select {
+		display: block;
+	}
+
+.content {
+	padding: 20px;
+}
+
+.half {
+	float: none;
+	display: block;
+}
+
+.testimonials {
+	padding: 20px;
+}
+	.testimonials h2 {
+		text-align: center;
+	}
+	.testimonials article {
+		margin-top: 20px;
+	}
+	.testimonials-image {
+		float: left;
+		width: 20%;
+	}
+	.testimonials-text {
+		float: right;
+		width: 75%;
+	}
+
+.footer {
+	padding: 20px;
+}
+	.footer p {
+		float: none !important;
+		text-align: center;
+	}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: HOMEPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main .wrapper {
+	overflow: hidden;
+	padding: 20px 20px 390px 20px;
+}
+	.main h1 {
+		font-weight: 400;
+	}
+	.main h3 {
+		margin-top: 10px;
+	}
+	.button {
+		margin-top: 15px;
+		padding: 5px 10px;
+	}
+	.iphone-smaller {
+		position: absolute; 
+		bottom: -65px;
+		left: 10px;
+	}
+	.iphone-bigger {
+		position: absolute; 
+		bottom: -75px;
+		right: 10px;
+	}	
+
+.introduction {
+	padding: 20px;
+}
+	.introduction-text {
+		padding-top: 20px;
+		font-size: 18px;
+	}
+
+.features {
+	padding: 20px;
+}
+	.features h2 {
+		text-align: center;
+	}
+	.features article {
+		float: none;
+		min-width: 280;
+		max-width: 310px;
+		margin: 20px auto 0 auto;
+	}
+	.features article img {
+		margin-bottom: 10px;
+	}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------
+PAGE: SUBPAGE
+-------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.main-subpage {
+	padding: 20px;
+}
+
+.container {
+	overflow: auto;
+	width: 100%;
+}
+
+.gallery li {
+	float: none;
+	display: block;
+	margin-bottom: 10px;
+}
+	.gallery .last {
+		margin-bottom: 0;
+	}
+	.gallery img {
+		margin: 0 auto;
+	}
+
+.input-text,
+.input-textarea {
+	width: 100%;
+	padding: 5px;
+}
+	.input-submit {
+		padding: 5px 20px;
+		cursor: pointer;
+	}

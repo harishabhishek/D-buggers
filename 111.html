@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+<title>Event and Wishlist</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="reset.css" media="all">
+<link rel="stylesheet" href="global.css" media="all">
+<link rel="stylesheet" href="mobile.css" media="all and (max-width:767px)">
+<link rel="stylesheet" href="desktop.css" media="all and (min-width:768px)">
+<!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="desktop.css" media="all"><![endif]-->
+<!--[if lt IE 9]><script src="html5.js"></script><![endif]-->
+<script src="jquery.min.js"></script>
+<script src="init.js"></script>
+<script src="jquery.js"></script>
+<script src="jquery.datetimepicker.js"></script>
+
+</head>
+<body>
+<header class="header">
+  <div class="wrapper cf">
+    <p class="logo"><a href="index.html" title="[Go to homepage]"><img src="design/logo.png" alt=""></a></p>
+    <nav class="nav cf" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="userHome.php">My account</a></li>
+        <li class="current"><a href="Event.html">Event and Wishlist</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="main-subpage">
+  <div class="wrapper">
+    <h1>Event and Wishlist</h1>
+  </div>
+ 
+</div>
+
+<div class="content">
+  <div class="wrapper cf">
+    <p class="nomt cf"> <img src="images/image-01.png" alt="" class="f-left">  </p>
+      <h2>Form</h2>
+      <!--suppress HtmlUnknownTarget -->
+      <form method="post" action="event.php">
+          <ul>
+              <li>
+                  <label>Event:</label>
+                      <select name="Event" type="text" class="input-text">
+                          <option>Birthday Party</option>
+                          <option>Graduation Party</option>
+                          <option>Hang out</option>
+                      </select>
+              </li>
+              <li>
+                  <label>Start Date:</label>
+                  <label>
+                      <input name="Date1" id="datetimepicker1" type="text" size="35" class="input-text">
+                  </label>
+              </li>
+              <li>
+                  <label>End Date:</label>
+                  <label>
+                      <input name="Date2" id="datetimepicker2" type="text" size="35" class="input-text">
+                  </label>
+              </li>
+              <li>
+                  <label>Description:</label>
+                  <label><textarea name="Description" cols="85" rows="7" class="input-textarea"></textarea></label>
+              </li>
+              <li>
+                  <input type="submit" value="Submit" class="input-submit">
+              </li>
+
+          </ul>
+      </form>
+  </div>
+</div>
+
+</body>
+<script>
+    var today = new Date();
+    today.setDate(today.getDate());
+    jQuery(function(){
+        jQuery('#datetimepicker1').datetimepicker({
+            format:'Y/m/d',
+            onShow:function( ct ){
+                this.setOptions({
+                    minDate:today,
+                    maxDate:jQuery('#datetimepicker2').val()?jQuery('#datetimepicker2').val():false
+                })
+            },
+            timepicker:false
+        });
+        jQuery('#datetimepicker2').datetimepicker({
+            format:'Y/m/d',
+            onShow:function( ct ){
+                this.setOptions({
+                    minDate:jQuery('#datetimepicker1').val()?jQuery('#datetimepicker1').val():false
+                })
+            },
+            timepicker:false
+        });
+    });
+</script>
+</html>

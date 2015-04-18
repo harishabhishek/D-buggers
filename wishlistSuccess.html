@@ -1,0 +1,182 @@
+<?php
+session_start();
+$user = session_id();
+if($user == -1){
+    exit();
+}
+session_id($user);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wishing Well</title>
+    <header class="header">
+    <div class="wrapper cf">
+       
+    <nav class="nav cf" id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="subpage.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="userHome.php">My Account</a></li>
+      </ul>
+    </nav>
+  </div>
+        
+
+    <FORM Action="logout.php" Method="post">
+        <input type="submit" value="Log Out" class="button33" style="margin-left: 30cm"></input>
+        
+    </FORM>
+    
+
+</header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="reset.css" media="all">
+    <link rel="stylesheet" href="global.css" media="all">
+    <link rel="stylesheet" href="mobile.css" media="all and (max-width:767px)">
+    <link rel="stylesheet" href="desktop.css" media="all and (min-width:768px)">
+    <!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="desktop.css" media="all"><![endif]-->
+    <!--[if lt IE 9]><script src="html5.js"></script><![endif]-->
+    <script src="jquery.min.js"></script>
+    <script src="init.js"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+
+            function post(path, params, method) {
+                method = method || "post"; // Set method to post by default if not specified.
+
+                // The rest of this code assumes you are not using a library.
+                // It can be made less wordy if you use one.
+                var form = document.createElement("form");
+                form.setAttribute("method", method);
+                form.setAttribute("action", path);
+
+                for(var key in params) {
+                    if(params.hasOwnProperty(key)) {
+                        var hiddenField = document.createElement("input");
+                        hiddenField.setAttribute("type", "hidden");
+                        hiddenField.setAttribute("name", key);
+                        hiddenField.setAttribute("value", params[key]);
+
+                        form.appendChild(hiddenField);
+                    }
+                }
+
+                document.body.appendChild(form);
+                form.submit();
+            }
+
+
+        
+
+
+            function showHint(str)
+            {
+                var xmlhttp;
+                if (str.length==0)
+                {
+                    document.getElementById("txtHint").innerHTML="";
+                    return;
+                }
+                if (window.XMLHttpRequest)
+                {// code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp=new XMLHttpRequest();
+                }
+                else
+                {// code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function()
+                {
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                    {
+                        document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("GET","productSuggestion.php?q="+str,true);
+                xmlhttp.send();
+            }
+            
+            </script>
+</head>
+<body>
+
+<div class="introduction">
+    <div class="wrapper cf">
+        <hgroup>
+        <h4>Successfully added item</h4>
+        <h2>Add items to your wishlist</h2>
+        </hgroup>
+      
+	<form method="post" action="product.php">
+          <table width="510" border="0" align="left">
+          
+		<tr>
+			<td colspan="2">Enter information about what you want others to buy for you</td>
+		<tr>
+		
+			  
+              <tr>
+                 
+                 <td colspan="2"> <input type="text" id="txt1" name="product1" placeholder="Product" onkeyup="showHint(this.value)" /></td></tr>
+           
+		
+            
+            <tr>
+                 
+                  <td colspan="2"> <input type="text" id="link1" name="link1" placeholder="Web Link" /><br>
+                 
+
+		
+              </tr>
+              
+              <tr>
+              <td colspan="2">
+              <p><b><u>Suggestions: </u></b></p>
+            <p><span id="txtHint"></span></p></td></tr>
+              
+              
+              
+              <tr>
+                   
+                  <td colspan="2"><input type="submit" class="button" name="button" id="button" value="Add"  /></td>
+              </tr>
+          </table>
+      </form>
+      
+      
+     <form method="post" action="gesture.php">
+          <table width="510" border="0" align="left">
+		<tr>
+			<td colspan="2">Enter information about what you want others to do for you</td>
+		<tr>	
+		 
+              <tr>
+                  <td colspan="2"><input type="text" name="gestureDescription" id="gestureDescription" placeholder="Description" /></td>
+
+
+              </tr>
+              <tr>
+                  <td colspan="2"> <textarea name="Details" cols="85" rows="7" input type="text" class="input-textarea" placeholder="Details"></textarea></td>
+                 
+
+
+              </tr>
+            
+              
+              <tr>
+                   
+                  <td colspan="2"><input type="submit" class="button" name="button" id="button" value="Add"  /></td>
+              </tr>
+          </table>
+      </form>
+      
+      
+     
+       </div>
+</div>
+
+</body>
+</html>
